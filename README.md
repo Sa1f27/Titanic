@@ -1,38 +1,47 @@
+# Titanic Kaggle Project
 
-# Titanic Kaggle Competition
+This project predicts survival on the Titanic using machine learning techniques. The dataset, available on Kaggle, is ideal for classification practice and uses both numeric and categorical features.
 
-This project aims to predict which passengers survived the Titanic disaster using machine learning on the Titanic dataset from Kaggle.
+## Libraries Used
+- **Data Manipulation**: `pandas`, `numpy`
+- **Data Visualization**: `seaborn`, `matplotlib`
+- **Machine Learning**: 
+  - Preprocessing: `sklearn.preprocessing`, `sklearn.impute`, `sklearn.compose`
+  - Model Selection & Evaluation: `sklearn.model_selection`
+  - Algorithms: `LogisticRegression`, `SVC`, `RandomForestClassifier`, `DecisionTreeClassifier`, `KNeighborsClassifier`, `GaussianNB`
 
-## Features
-- Exploratory Data Analysis (EDA)
-- Data Preprocessing
-- Model Training and Evaluation
+## Installation
 
-## Setup
-
-1. **Install dependencies**:
+1. Install dependencies:
    ```
-   pip install pandas numpy matplotlib seaborn scikit-learn
+   pip install pandas numpy seaborn matplotlib scikit-learn
    ```
 
-2. **Download Dataset**:
-   - Download `train.csv` and `test.csv` from the [Kaggle Titanic page](https://www.kaggle.com/c/titanic).
+2. Download the Titanic dataset (`train.csv` and `test.csv`) from the [Kaggle competition page](https://www.kaggle.com/c/titanic).
 
-## Steps
+## Workflow
 
-1. **Exploratory Data Analysis (EDA)**: Analyze relationships in the data.
-2. **Preprocessing**: Handle missing values, encode categorical features, and normalize data.
-3. **Model Training**: Train models like Logistic Regression, Decision Trees, or Random Forests.
-4. **Evaluation**: Assess model performance and make improvements.
+1. **Data Analysis**: Explore data with Seaborn and Matplotlib.
+2. **Data Preprocessing**:
+   - Encode categorical variables with `OrdinalEncoder` and `OneHotEncoder`
+   - Handle missing values with `SimpleImputer`
+   - Scale features with `StandardScaler`
+3. **Model Training and Selection**: Use `Pipeline` and `GridSearchCV` to train models and find optimal parameters.
+4. **Evaluation**: Use cross-validation with `StratifiedKFold` and evaluate with metrics.
 
-## Submission
-- Make predictions on the test set and submit results in the specified format on Kaggle.
+## Usage
+
+1. Run the project notebook or script to preprocess data, train models, and generate predictions.
+2. Submit predictions to Kaggle in the required format for evaluation.
 
 ## Files
-- `titanic.ipynb`: Jupyter notebook with code for data analysis, preprocessing, and model training.
-- `train.csv`: Training dataset.
-- `test.csv`: Test dataset.
 
-## Acknowledgements
-This dataset is provided by Kaggle as part of the Titanic ML competition. Check out the full competition [here](https://www.kaggle.com/c/titanic).
+- `titanic.ipynb`: Contains all code for data analysis, preprocessing, and model training.
+- `train.csv` and `test.csv`: Training and test datasets from Kaggle.
+
+## Resources
+- [Kaggle Titanic Competition](https://www.kaggle.com/c/titanic) for dataset details and submission guidelines.
+
 ```
+
+This README covers setup, workflow, and usage details for your Titanic project using Scikit-learn tools and a range of classification algorithms.
